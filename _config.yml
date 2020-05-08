@@ -30,6 +30,8 @@ paginate: 1
 pages_list:
   About: '/about'
   Archive: '/archive'
+  Projects: '/projects'
+  Publications: '/publications'
   Feed: '/atom.xml'
 
 plugins:

@@ -15,5 +15,7 @@ Here are fields of computer science that I'm now interested in:
 
 I like to understand in anatomic detail, and I want to share my understanding as easily as possible. So I would try to include rich examples, implementations, and enough descriptions.
 
+If you want to contact me, you can reach me at hhro9712@gmail.com
+
 Then, enjoy my memory🧠.
 
