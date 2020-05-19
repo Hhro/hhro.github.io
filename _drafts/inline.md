@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Inline function in C & C++
+comments: true
 ---
 
 ## Function-call Overhead

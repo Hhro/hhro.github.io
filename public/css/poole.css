@@ -106,6 +106,10 @@ h4, h5, h6 {
 /* Body text */
 p {
   margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
+.page>p {
   margin-bottom: 1rem;
 }
 
