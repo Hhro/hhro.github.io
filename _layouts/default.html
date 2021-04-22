@@ -6,19 +6,16 @@
 
   <body>
 
-    {% include sidebar.html %}
     {% include google_analytics.html %}
 
     <div class="wrap">
       <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="/" title="Home">{{ site.title }}</a>
-              {% for page in site.pages_list %}
-                &nbsp;&nbsp;&nbsp;<small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
-              {% endfor %}
-          </h3>
-        </div>
+          <a class="masthead-title" href="/" title="Home">{{ site.title }}</a>
+          <nav class="masthead-categories">
+            {% for page in site.pages_list %}
+            <small><a href="{{ page[1] }}">{{ page[0] }}</a></small>
+            {% endfor %}
+          </nav>
       </div>
 
       <div class="container content">
@@ -27,9 +24,5 @@
         {% include comments.html %}
       </div>
     </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-    <script src='{{ site.baseurl }}/public/js/script.js'></script>
   </body>
 </html>

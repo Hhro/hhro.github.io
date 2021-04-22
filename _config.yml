@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,21 +18,21 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Anatomic Reports💻
-tagline: 'Hack, RE and AI'
+title: Anatomic Reports
+tagline: "Divide and Conquer"
 description: >- # this means to ignore newlines until "baseurl:"
-       Sharing my daily understandings
+  Sharing my daily understandings
 baseurl: ""
-github_username:  Hhro
+github_username: Hhro
 permalink: pretty
 
 paginate: 1
 pages_list:
-  About: '/about'
-  Archive: '/archive'
-  Projects: '/projects'
-  Publications: '/publications'
-  Feed: '/atom.xml'
+  About: "/about"
+  Archive: "/archive"
+  Projects: "/projects"
+  Publications: "/publications"
+  Feed: "/atom.xml"
 
 plugins:
   - jekyll-gist
@@ -64,7 +64,7 @@ exclude:
 sass:
   sass_dir: _sass
   style: compressed
- 
+
 author:
   name: Seungwan, Kwon
   email: hhro9712@gmail.com
