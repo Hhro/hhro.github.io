@@ -43,6 +43,25 @@ html {
     "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; */
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
+  scrollbar-width: thin;
+  overflow-y: overlay;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-appearance: none;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-appearance: none;
+  box-shadow: inset 0 0 0 2px #fff;
+  background: #b3b3b3;
 }
 
 /*
@@ -106,28 +125,59 @@ html {
  */
 
 .masthead {
-  max-width: 80%;
+  border-bottom: 1px solid #eee;
   display: flex;
   margin: auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
+}
+@media (min-width: 38em) {
+  .masthead {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 56em) {
+  .masthead {
+    max-width: 58rem;
+    width: 100%;
+  }
 }
 
 .masthead a {
-  font-size: 1.5rem;
   color: #505050;
+}
+
+.masthead-title {
+  flex: 0 0 auto;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
-.masthead small > a {
-  margin: 0 1rem;
+.masthead-categories {
+  margin-top: 0.3rem;
+  flex: 1 1 auto;
+}
+
+.masthead-categories a {
   font-size: 1.2rem;
 }
 
-.masthead-categories {
-  margin-left: 6rem;
-  margin-top: 0.3rem;
+.masthead-categories.left-side {
+  text-align: left;
+}
+
+.masthead-categories.left-side a {
+  margin-left: 1rem;
+  margin-right: 3.5rem;
+}
+
+.masthead-categories.right-side {
+  text-align: right;
+}
+
+.masthead-categories.right-side a {
+  margin-left: 3.5rem;
+  margin-right: 1rem;
 }
 
 @media (max-width: 48em) {

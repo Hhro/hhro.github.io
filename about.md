@@ -18,4 +18,3 @@ I like to understand in anatomic detail, and I want to share my understanding as
 If you want to contact me, you can reach me at hhro9712@gmail.com
 
 Then, enjoy my memory🧠.
-

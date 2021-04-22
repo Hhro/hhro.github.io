@@ -32,7 +32,6 @@ pages_list:
   Archive: "/archive"
   Projects: "/projects"
   Publications: "/publications"
-  Feed: "/atom.xml"
 
 plugins:
   - jekyll-gist

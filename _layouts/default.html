@@ -10,11 +10,15 @@
 
     <div class="wrap">
       <div class="masthead">
+          {% assign page_list = site.pages_list%}
+          <nav class="masthead-categories left-side">
+            <small><a href="{{ page_list["About"] }}">{{ "About" }}</a></small>
+            <small><a href="{{ page_list["Archive"] }}">{{ "Archive" }}</a></small>
+          </nav>
           <a class="masthead-title" href="/" title="Home">{{ site.title }}</a>
-          <nav class="masthead-categories">
-            {% for page in site.pages_list %}
-            <small><a href="{{ page[1] }}">{{ page[0] }}</a></small>
-            {% endfor %}
+          <nav class="masthead-categories right-side">
+            <small><a href="{{ page_list["Projects"] }}">{{ "Projects" }}</a></small>
+            <small><a href="{{ page_list["Publications"] }}">{{ "Publications" }}</a></small>
           </nav>
       </div>
 
