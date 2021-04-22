@@ -1,10 +1,10 @@
 ---
-layout: page
+layout: post
 title: 한국인을 위한 John The Ripper(JTR) 가이드
 comments: true
 ---
 
-**이 가이드 문서는 원래 대학교 3학년 때 학교 과제로 제출했던 건데, 최근에 후배한테 질문이 들어와서 꺼내봤다가 블로그에 포스팅하면 딱일 것 같아서 포스팅하게 됐습니다.*
+\*_이 가이드 문서는 원래 대학교 3학년 때 학교 과제로 제출했던 건데, 최근에 후배한테 질문이 들어와서 꺼내봤다가 블로그에 포스팅하면 딱일 것 같아서 포스팅하게 됐습니다._
 
 ---
 
@@ -14,7 +14,7 @@ comments: true
 
 JTR은 `openwall`에서 개발한 패스워드 크래킹 툴입니다. wordlist를 기반으로한 dictionary attack, bruteforcing attack을 이용할 수 있습니다. 또한 `john.conf`라는 설정파일을 이용하여 브루트포싱의 효율을 높일 수 있습니다.
 
-------
+---
 
 ### JTR 설치 가이드
 
@@ -32,7 +32,7 @@ JTR은 리눅스의 여러 버전에서 간단하게 설치가 가능합니다.
   $sudo yum install john
   ```
 
-------
+---
 
 ### JTR 모드
 
@@ -48,7 +48,7 @@ JTR은 리눅스의 여러 버전에서 간단하게 설치가 가능합니다.
 
    브루트포싱을 합니다. 일반적으로 보안을 고려하여 비밀번호를 작성한다면 Wordlist mode, single mode에서 크랙되는 일은 없을 것입니다. 전혀 연관성 없는 어려운 단어를 복잡하게 섞거나, 애초에 단어가 아니게 비밀번호를 설정할 것입니다. 그런 경우에 incremental mode가 해결해줄 수 있습니다. 만약 패스워드의 제약사항(ex, ASCII only, 길이)등을 알 경우 `john.conf`를 설정하여 훨씬 수월하게 크랙을 진행할 수 있습니다.
 
-------
+---
 
 ### JTR 기본 사용 예시
 
@@ -66,11 +66,11 @@ Retype new UNIX password: cat123
 passwd: password updated successfully
 Changing the user information for jtr
 Enter the new value, or press ENTER for the default
-	Full Name []: 
-	Room Number []: 
-	Work Phone []: 
-	Home Phone []: 
-	Other []: 
+	Full Name []:
+	Room Number []:
+	Work Phone []:
+	Home Phone []:
+	Other []:
 Is the information correct? [Y/n] Y
 ```
 
@@ -116,7 +116,7 @@ $john test.shadow
 
 기본 설정으로는 `cat123`라는 단순한 비밀번호임에도 1시간이 지나도 비밀번호를 찾지 못합니다.
 
-------
+---
 
 ### JTR 효율적으로 사용하기
 
@@ -135,7 +135,7 @@ JTR을 사용하다보면 이런 경우가 비일비재합니다.
 
 ![](../public/images/1561397898863.png)
 
-*!15GB wordlist!*
+_!15GB wordlist!_
 
 위 워드리스트를 사용하면 상당한 시간이 소요되겠지만, 웬만한 비밀번호들은 모두 크랙될 것입니다.
 
@@ -164,7 +164,7 @@ JTR을 사용하다보면 이런 경우가 비일비재합니다.
   `rockyou`라는 용량이 적절하고, 대중적으로 유명한 wordlist를 사용하여 크랙해보겠습니다.
 
   ```
-  $john --wordlist=/usr/share/john/rockyou.txt test.shadow                     
+  $john --wordlist=/usr/share/john/rockyou.txt test.shadow
   Loaded 1 password hash (crypt, generic crypt(3) [?/64])
   Press 'q' or Ctrl-C to abort, almost any other key for status
   0g 0:00:00:03 0% 0g/s 490.7p/s 490.7c/s 490.7C/s clover..punkrock
@@ -174,7 +174,7 @@ JTR을 사용하다보면 이런 경우가 비일비재합니다.
   Session completed
   $john --show test.shadow
   jtr:cat123:18071:0:99999:7:::
-  
+
   1 password hash cracked, 0 left
   ```
 
@@ -204,7 +204,7 @@ JTR을 사용하다보면 이런 경우가 비일비재합니다.
 
 위의 예시에서도 볼 수 있고, 당연한 얘기지만 일반적으로 상상할 수 있는 단어로 이루어진 비밀번호의 크랙은 wordlist가 압도적으로 빠릅니다. 따라서 빠르게 비밀번호를 크랙하고 싶고, 비밀번호가 상식적인 패턴을 가졌을 것이라고 생각된다면, 적절한 용량의 wordlist에 그 사람과 관련된 단어를 추가한 wordlist를 만들어서 사용하는 것이 좋습니다.
 
-------
+---
 
 ## 한국인의 비밀번호를 위한 JTR
 
@@ -219,7 +219,7 @@ JTR을 사용하다보면 이런 경우가 비일비재합니다.
 
 따라서 효율적인 크랙킹을 위해선 한국인의 특성이 반영된 wordlist가 필요합니다.
 
-------
+---
 
 ### 한국인 특성이 반영된 wordlist 구성
 
@@ -251,7 +251,7 @@ Last: [이름랭킹](https://koreanname.me/)에서 성별별로 사용 빈도 �
 
 ### 숫자, 특수문자
 
-생년월일, 전화번호, 특수문자(!@#$*()_) 등을 이용하여 비밀번호를 까다롭게 하는 경우가 있으므로, 이를 `rule`을 이용하여 보완해 줍니다.
+생년월일, 전화번호, 특수문자(!@#$\*()\_) 등을 이용하여 비밀번호를 까다롭게 하는 경우가 있으므로, 이를 `rule`을 이용하여 보완해 줍니다.
 
 📝여기에 과제를 위해 교수님이 연상할 수 있을 법한 단어들을 추가 또는 `rule`에 반영해줍니다.
 
@@ -262,13 +262,13 @@ Last: [이름랭킹](https://koreanname.me/)에서 성별별로 사용 빈도 �
 - 교수님의 신상(?)정보 : 휘강, 김휘강, cenda, huykang, cendakim, 9452, 94, 99,
 - 기타 : 해방이, 해킹방어이론, 과목37, 게임, cydf311, cydf, dropbox, ai, AI, RTFM, google, Kaizen, kaizen, starwars, netsec
 
-------
+---
 
 ### 발견될 빈도에 대한 추측을 바탕으로 최적화하기
 
 ### 비밀번호에 사용되지 않을 법한 단어 삭제
 
-동사, 형용사를 비밀번호에 사용할 가능성은 매우 적습니다. 따라서 `다(ek)`로 끝나는 단어(.*ek$)들을 모두 삭제합니다.
+동사, 형용사를 비밀번호에 사용할 가능성은 매우 적습니다. 따라서 `다(ek)`로 끝나는 단어(.\*ek$)들을 모두 삭제합니다.
 
 ### 길이에 대한 추론을 바탕으로 단어 목록에서 삭제
 
@@ -346,7 +346,7 @@ JTR은 rule을 앞에서 부터 순차적으로 탐색합니다. 따라서 빈�
 23. !?A $[0-9] $[0-9] $[0-9] ^[!@#$*]
 ```
 
-------
+---
 
 ### 여러 비밀번호 유형 크랙 테스트
 
@@ -368,6 +368,3 @@ test:$6$7eXL3Tzf$E.onFt66Fp7Hzs7oJa3jMHsXDrH6FJEVE7qTzzIUwwXPcjfUzvAIvLZUuimhE.c
 `rule8`까지 탐색한 것인데, 뒤로 갈수록 복잡도가 비약적으로 증가하기 때문에, 만약 `rule20`을 넘어서서 탐색하려 한다면 24시간안에 비밀번호를 찾는것은 어려울 것입니다.
 
 그러나 그 외의 경우에는 꽤 만족할 만한 속도로 비밀번호를 크랙할 수 있을 것입니다.
-
-
-

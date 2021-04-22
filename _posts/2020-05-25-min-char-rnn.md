@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Study RNN with 'min-char-rnn' of Andrej Karpathy(1)
 comments: true
 ---
@@ -26,17 +26,15 @@ min-char-rnn은 Andrej Karpathy가 공개한 문장 생성 RNN 모델이다. 원
 
 ## 순환 신경망(RNN)
 
-데이터의 의미가 다른 데이터들과 의존성을 가질 경우, 이제까지 들어온 데이터들에 대한 **기억**이 존재해야 새로 들어온 것의 의미를 파악할 수 있다. 예를 들어 '사과를 먹는 사람'과 '사과를 재배하는 사람' 이라는 두 문장이 있을 때, '사람'을 파악하기 위해서는 먼저 들어온 데이터들에 대한 정보를 가지고 있어야 한다. 
+데이터의 의미가 다른 데이터들과 의존성을 가질 경우, 이제까지 들어온 데이터들에 대한 **기억**이 존재해야 새로 들어온 것의 의미를 파악할 수 있다. 예를 들어 '사과를 먹는 사람'과 '사과를 재배하는 사람' 이라는 두 문장이 있을 때, '사람'을 파악하기 위해서는 먼저 들어온 데이터들에 대한 정보를 가지고 있어야 한다.
 
 **RNN**이 다른 신경망들과 가장 차별화되는 부분이 이런 기억을 가지고 있다는 것이다. RNN은 다음과 같은 구조로 이루어져 있다
 
-아래 그림에서 노란 블록을 **순환 뉴런**이라고 하며, 각 순환 뉴런 사이에 전달되고 있는 *h*가 학습의 결과로 기억되는 정보이다. 
+아래 그림에서 노란 블록을 **순환 뉴런**이라고 하며, 각 순환 뉴런 사이에 전달되고 있는 *h*가 학습의 결과로 기억되는 정보이다.
 
 ![KakaoTalk_20200525_012134498](/public/images/KakaoTalk_20200525_012134498.jpg)
 
-*Figure1. SImple RNN*
-
-
+_Figure1. SImple RNN_
 
 <br>
 
@@ -46,7 +44,7 @@ min-char-rnn은 Andrej Karpathy가 공개한 문장 생성 RNN 모델이다. 원
 
 ![KakaoTalk_20200525_012209017](/public/images/KakaoTalk_20200525_012209017-1590346246457.jpg)
 
-*Figure2. Recurrent Neuron of min-char-rnn* 
+_Figure2. Recurrent Neuron of min-char-rnn_
 
 <br>
 
@@ -57,25 +55,27 @@ min-char-rnn은 Andrej Karpathy가 공개한 문장 생성 RNN 모델이다. 원
 원-핫 인코딩은 입력 집합과 같은 크기를 갖는 1차원 벡터의 원소를 모두 0으로 초기화하고, 입력값에 해당하는 인덱스만 1로 설정하는 방법이다. 가장 쉽고, 싸면서도 문자를 일대일로 벡터와 대응시킬 수 있기 때문에 자연어 처리를 처음 접할 때 가장 먼저 배우게 된다.
 
 원-핫 인코딩의 예:<br><center>
+
 $$
 Enc('a') = [1,0,0,0,0,\cdots]\\
 Enc('b') = [0,1,0,0,0,\cdots]
 $$
+
 </center>
 
 ![KakaoTalk_20200525_040829226](/public/images/KakaoTalk_20200525_040829226.jpg)
 
-*Figure3. Input layer of min-char-rnn*
+_Figure3. Input layer of min-char-rnn_
 
 <br>
 
 **은닉층(Hidden layer)**
 
-은닉층은 직전 뉴런의 은닉상태인 $$h_{t-1}$$와 입력층의 출력인 $$x_t$$로 $$a$$를 계산한다.  은닉층에서는 아래 그림의 값들 중 $$w_{xh}, w_{hh}$$ 그리고 $$b_h$$가 역전파를 통한 학습의 대상이다.
+은닉층은 직전 뉴런의 은닉상태인 $$h_{t-1}$$와 입력층의 출력인 $$x_t$$로 $$a$$를 계산한다. 은닉층에서는 아래 그림의 값들 중 $$w_{xh}, w_{hh}$$ 그리고 $$b_h$$가 역전파를 통한 학습의 대상이다.
 
 ![KakaoTalk_20200525_034848562](/public/images/KakaoTalk_20200525_034848562.jpg)
 
-*Figure4. Hidden layer of min-char-rnn*
+_Figure4. Hidden layer of min-char-rnn_
 
 <br>
 
@@ -85,13 +85,13 @@ $$
 
 ![KakaoTalk_20200525_034906773](/public/images/KakaoTalk_20200525_034906773.jpg)
 
-*Figure5. Activation layer of min-char-rnn*
+_Figure5. Activation layer of min-char-rnn_
 
 <br>
 
 **후처리층(Postprocess layer)**
 
-후처리층은 소프트맥스 함수를 통해, 활성층의 출력 $$y_t$$를 $$p_t$$로 변형한다. 
+후처리층은 소프트맥스 함수를 통해, 활성층의 출력 $$y_t$$를 $$p_t$$로 변형한다.
 
 소프트맥스는 벡터를 원소들의 총 합이 1인 확률분포 형태로 변형한다.
 
@@ -105,7 +105,7 @@ $$
 
 ![KakaoTalk_20200525_040939456](/public/images/KakaoTalk_20200525_040939456.jpg)
 
-*Figure6. Post process layer of min-char-rnn*
+_Figure6. Post process layer of min-char-rnn_
 
 <br>
 
@@ -115,8 +115,6 @@ $$
 
 ![KakaoTalk_20200525_034939210](/public/images/KakaoTalk_20200525_034939210.jpg)
 
-*Figure7. Output layer of min-char-rnn*
+_Figure7. Output layer of min-char-rnn_
 
-
-
-*=>다음 편에서는 min-char-rnn의 역전파에 대해 다루겠습니다.*
+_=>다음 편에서는 min-char-rnn의 역전파에 대해 다루겠습니다._
