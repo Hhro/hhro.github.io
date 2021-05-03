@@ -371,7 +371,7 @@ Then I wrote down all correct answers, looked at the tree structure, and figured
 
 ![image-20210503222758786](/public/images/image-20210503222758786.png)
 
-It looks pretty inefficient to deduce the rest of the gate by playing games. So I went back to analyze `rick`. Thankfully, our teammate [okas832](https://twitter.com/okascmy1?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) found and informed me of the code that handles the logic gates. The code is located at `0x8322`. d
+It looks pretty inefficient to deduce the rest of the gate by playing games. So I went back to analyze `rick`. Thankfully, our teammate [okas832](https://twitter.com/okascmy1?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) found and informed me of the code that handles the logic gates. The code is located at `0x8322`. I analyzed the code and identifies the remaining gates.
 
 ---
 
