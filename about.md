@@ -5,18 +5,78 @@ title: About
 
 ## Introduction
 
-Hi, my name's Seungwan Kwon(a.k.a. hhro), and I graduated in cyber defense from Korea University.
+Hi, my name's Seungwan Kwon(a.k.a anat0my, Hhro).\\
+This blog is for my studying records, mainly focused on computer security.\\
+I like to understand in detail, and want to share my understanding easily.
 
-I'm currently playing CTF as a member of the CyKor and working for the [Theori](https://theori.io/).
+[**Twitter**](https://twitter.com/Hhro),
+[**Github**](https://github.com/Hhro),
+[**LinkedIn**](https://www.linkedin.com/in/seungwan-kwon-434b66139/)
 
-This blog is for my studying records of computer science, security, and whatever I learned.
+---
 
-Here are the topics I'm now interested in:
+## Education
 
-- Software Security
+**2017-2021**: Korea University\\
+B.S. in Engineering, Department of Cyber Defense
+
+**2021-present**: KAIST(Korea Advanced Institute of Science and Technology()\\
+M.S in Information Security, [ProsysLab](https://prosys.kaist.ac.kr/)
+
+---
+
+## Work
+
+**2020-2021** [**Theori**](https://theori.io/): [Dreamhack](https://dreamhack.io/) Contents Manager
+
+---
+
+## Skill
+
+- Programming: python, c/c++, javascript, ocaml
+- Security: reverse engineering, static analysis
+
+---
+
+## Interest
+
+- Javascript JIT Compiler Verification
+- Binary/Code representation learning
 - Reverse Engineering
-- Aritificial Intelligence
 
-I like to understand in anatomic detail, and I want to share my understanding easily. So I would try to include rich examples, implementations, and enough descriptions.
+---
 
-If you want to contact me, you can reach me at hhro9712@gmail.com
+## Publications
+
+- [Perfect Guide for Pwnable Begineers[KR]](https://www.notion.so/Perfect-guide-for-beginners-e4e244fac7f047588569be9f7f18412b)
+
+---
+
+## Contest
+
+### 2021
+
+- zer0pts CTF: 2nd place, K-Students
+
+### 2020
+
+- Codegate CTF (univ div): 1st place, CyKor
+
+- zer0pts CTF: 4th place, CyKor
+
+- DEF CON CTF: 8th place, CyKor
+
+- WCTF: challenge author of [**BLPfs**](https://github.com/Hhro/BLPfs), CyKor
+
+### 2019
+
+- Christmas CTF: 1st place, 로맨틱브팍
+
+- Belluminar CTF: challenge author of Fire!, CyKor
+
+- HolyShield CTF: 5th place
+
+- WCTF: challenge author of BabyPwn, CyKor
+
+- Flareon: 9 solves
+
