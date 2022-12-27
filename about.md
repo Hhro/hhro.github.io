@@ -52,6 +52,13 @@ M.S in Information Security, [ProsysLab](https://prosys.kaist.ac.kr/)
 
 ---
 
+## Reward
+
+- [chromium/issue-1392953](https://bugs.chromium.org/p/chromium/issues/detail?id=1392953)[10000$]: (TBA)
+- [chromium/issue-1393865](https://bugs.chromium.org/p/chromium/issues/detail?id=1393865)[7000$]: (TBA)
+
+---
+
 ## Contest
 
 ### 2021
@@ -79,4 +86,3 @@ M.S in Information Security, [ProsysLab](https://prosys.kaist.ac.kr/)
 - WCTF: challenge author of BabyPwn, CyKor
 
 - Flareon: 9 solves
-
