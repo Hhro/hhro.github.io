@@ -27,39 +27,34 @@ M.S in Information Security, [ProsysLab](https://prosys.kaist.ac.kr/)
 
 ## Work
 
-**2020-2021** [**Theori**](https://theori.io/): [Dreamhack](https://dreamhack.io/) Contents Manager
-
----
-
-## Skill
-
-- Programming: python, c/c++, javascript, ocaml
-- Security: reverse engineering, static analysis
+**2020-2021** [**Theori**](https://theori.io/): [Dreamhack](https://dreamhack.io/) Editor
 
 ---
 
 ## Interest
 
-- Javascript JIT Compiler Verification
-- Binary/Code representation learning
-- Reverse Engineering
+- Automated bug detection: program analysis, testing
+- Compiler verification/validation: SMT-based translation validation
+- Programming language & Logic
+- Reverse engineering
 
 ---
 
-## Publications
+## Bug Reports
 
-- [Perfect Guide for Pwnable Begineers[KR]](https://www.notion.so/Perfect-guide-for-beginners-e4e244fac7f047588569be9f7f18412b)
+### 2022
+- [chromium/issue-1392953](https://bugs.chromium.org/p/chromium/issues/detail?id=1392953) (10000$): Optimization bug in TurboShaft
+- [chromium/issue-1392928](https://bugs.chromium.org/p/chromium/issues/detail?id=1392928)
+- [chromium/issue-1393256](https://bugs.chromium.org/p/chromium/issues/detail?id=1393256)
+- [chromium/issue-1393865](https://bugs.chromium.org/p/chromium/issues/detail?id=1393865) (7000$):  Optimization bug in Turbofan
+
+### 2023
+- [chromium/issue-1407571](https://bugs.chromium.org/p/chromium/issues/detail?id=1407571) (7000$)
+- [chromium/issue-1422166](https://bugs.chromium.org/p/chromium/issues/detail?id=1422166)
 
 ---
 
-## Reward
-
-- [chromium/issue-1392953](https://bugs.chromium.org/p/chromium/issues/detail?id=1392953)[10000$]: (TBA)
-- [chromium/issue-1393865](https://bugs.chromium.org/p/chromium/issues/detail?id=1393865)[7000$]: (TBA)
-
----
-
-## Contest
+## Awards
 
 ### 2021
 
